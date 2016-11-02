@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Londrina Solid";
+}
+
+#header {
+  height: 20em;
+}
+
+#bg {
+  background: url("https://i.imgpile.com/i/c4ygw.jpg");
+  background-size: 100%;
+  min-width: 100%;
+  height: 2000px;
+  position: fixed;
+  z-index: -1;
+  top: 0px;
+  /* Needed since scroll was very slow on chrome without it (?) */
+  -webkit-transform: translate3d(0,0,0);
+}
+
+.header-text {
+  margin: 3%;
+  font-family: 'Londrina Solid';
+  font-weight: normal;
+  font-size: 10em;
+  position: relative;
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+  text-shadow: 0 10px 20px #555;
+}
+
+#navbar {
+  /* */
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  margin: 0;
+  /* Needed so it doesnt jump around on transitions */
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  box-shadow: 0 3px 10px #555;
+}
+
+.navbar-brand {
+  font-size: 2em;
+  margin-bottom: 2px;
+}
+
+#navbar li {
+  font-weight: bold;
+}
+
+#content {
+  position: relative;
+  background-image: linear-gradient(to bottom ,rgba(200,100,100,0.1),rgba(230,230,255,1));
+  z-index: 10;
+  padding: 70px 0;
+}
+
+.page-header {
+  margin-top: -2em;
+}
+
+.jumbotron {
+  box-shadow: 0 5px 20px #555;
+}
+
+.portfolio-wrap {
+  border-radius: 10px;
+  border: 0.5px solid #e0e0e0;
+  padding: 1em;
+}
+
+.portfolio-img {
+  width: 100%;
+  heigth: auto;
+}
+
+form {
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1em;
+}
+
+.form-item {
+  padding: 1em 0;
+}
+
+.form-item label {
+  display: none;
+}
+
+.form-item input {
+  width: 75%;
+  height: 3em;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.form-item input::-webkit-input-placeholder {
+  font-size: 1em;
+  text-align: center;
+  margin: auto;
+}
+
+.form-item textarea::-webkit-input-placeholder {
+  font-size: 1em;
+  text-align: center;
+}
+
+.form-item textarea {
+  width: 75%;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+button {
+  width: 50%;
+  height: 2em;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color: #e9e9e9;
+}
+
+footer {
+  box-shadow: 0 5px 20px #555;
+  z-index: 20;
+  position: absolute;
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+footer li {
+  font-size: 1.5em;
+  padding: 0 0.5em;
+  display: inline-block;
+  list-style: none;
+}
+
+footer a:link {
+  color: #222;
+}
+
+footer a:visited {
+  color: #222;
+}
+
+/* To avoid problems with background repeating */
+
+@media (max-width: 80em) {
+  #bg {
+    background-size: cover;
+  }
+}
